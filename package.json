@@ -1,0 +1,35 @@
+{
+  "name": "free-musicflow",
+  "version": "1.0.0",
+  "description": "Spotify-like free legal music streaming app using Jamendo API",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm --prefix client run dev\"",
+    "server": "nodemon server/index.js",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  },
+  "keywords": [
+    "music",
+    "spotify",
+    "jamendo",
+    "react",
+    "express",
+    "render"
+  ],
+  "license": "MIT"
+}
